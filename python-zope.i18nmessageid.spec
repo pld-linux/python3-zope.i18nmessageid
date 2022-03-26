@@ -10,7 +10,7 @@ Summary:	Message Identifiers for internationalization
 Summary(pl.UTF-8):	Identyfikatory komunikatów do lokalizacji
 Name:		python-%{module}
 Version:	5.0.1
-Release:	1
+Release:	2
 License:	ZPL v2.1
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.i18nmessageid/zope.i18nmessageid-%{version}.tar.gz
