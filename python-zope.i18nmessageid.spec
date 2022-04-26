@@ -21,6 +21,7 @@ BuildRequires:	python >= 1:2.7
 BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
 %if %{with tests}
+BuildRequires:	python-coverage
 BuildRequires:	python-six
 BuildRequires:	python-zope.testing
 BuildRequires:	python-zope.testrunner
@@ -31,6 +32,7 @@ BuildRequires:	python3 >= 1:3.5
 BuildRequires:	python3-devel >= 1:3.5
 BuildRequires:	python3-setuptools
 %if %{with tests}
+BuildRequires:	python3-coverage
 BuildRequires:	python3-six
 BuildRequires:	python3-zope.testing
 BuildRequires:	python3-zope.testrunner
@@ -119,8 +121,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/zope/i18nmessageid
 %{py_sitedir}/zope/i18nmessageid/*.py[co]
 %attr(755,root,root) %{py_sitedir}/zope/i18nmessageid/_zope_i18nmessageid_message.so
-%{py_sitedir}/zope.i18nmessageid-*.egg-info
-%{py_sitedir}/zope.i18nmessageid-*-nspkg.pth
+%{py_sitedir}/zope.i18nmessageid-%{version}-py*.egg-info
+%{py_sitedir}/zope.i18nmessageid-%{version}-py*-nspkg.pth
 %endif
 
 %if %{with python3}
@@ -131,12 +133,12 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/zope/i18nmessageid/*.py
 %{py3_sitedir}/zope/i18nmessageid/__pycache__
 %attr(755,root,root) %{py3_sitedir}/zope/i18nmessageid/_zope_i18nmessageid_message.cpython-*.so
-%{py3_sitedir}/zope.i18nmessageid-*.egg-info
-%{py3_sitedir}/zope.i18nmessageid-*-nspkg.pth
+%{py3_sitedir}/zope.i18nmessageid-%{version}-py*.egg-info
+%{py3_sitedir}/zope.i18nmessageid-%{version}-py*-nspkg.pth
 %endif
 
 %if %{with doc}
 %files apidocs
 %defattr(644,root,root,755)
-%doc docs/_build/html/{_modules,_static,*.html,*.js}
+%doc docs/_build/html/{_static,*.html,*.js}
 %endif
