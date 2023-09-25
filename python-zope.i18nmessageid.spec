@@ -9,12 +9,13 @@
 Summary:	Message Identifiers for internationalization
 Summary(pl.UTF-8):	Identyfikatory komunikatów do lokalizacji
 Name:		python-%{module}
-Version:	5.0.1
-Release:	3
+# keep 5.x here for python2 support
+Version:	5.1.1
+Release:	1
 License:	ZPL v2.1
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.i18nmessageid/zope.i18nmessageid-%{version}.tar.gz
-# Source0-md5:	2ee5f51c26e2a5a040ba2defb3f9d8a7
+# Source0-md5:	96d1f677dcccd79b6917df3f4f86133e
 URL:		https://www.zope.dev/
 %if %{with python2}
 BuildRequires:	python >= 1:2.7
