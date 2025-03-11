@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Identyfikatory komunikatów do lokalizacji
 Name:		python-%{module}
 # keep 5.x here for python2 support
 Version:	5.1.1
-Release:	2
+Release:	3
 License:	ZPL v2.1
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.i18nmessageid/zope.i18nmessageid-%{version}.tar.gz
